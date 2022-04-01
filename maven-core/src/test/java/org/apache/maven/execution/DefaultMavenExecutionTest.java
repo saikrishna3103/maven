@@ -33,10 +33,10 @@ import org.junit.jupiter.api.Test;
 /**
  * @author Benjamin Bentmann
  */
-public class DefaultMavenExecutionTest
+class DefaultMavenExecutionTest
 {
     @Test
-    public void testCopyDefault()
+    void testCopyDefault()
     {
         MavenExecutionRequest original = new DefaultMavenExecutionRequest();
         MavenExecutionRequest copy = DefaultMavenExecutionRequest.copy( original );
@@ -45,7 +45,7 @@ public class DefaultMavenExecutionTest
     }
 
     @Test
-    public void testResultWithNullTopologicallySortedProjectsIsEmptyList()
+    void testResultWithNullTopologicallySortedProjectsIsEmptyList()
     {
         MavenExecutionResult result = new DefaultMavenExecutionResult();
         result.setTopologicallySortedProjects( null );

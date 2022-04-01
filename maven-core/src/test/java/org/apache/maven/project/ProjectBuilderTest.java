@@ -37,6 +37,7 @@ import org.apache.maven.model.building.ModelProblem;
 import org.apache.maven.model.building.ModelSource;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
+import org.junit.jupiter.api.io.TempDir;
 
 import static org.apache.maven.project.ProjectBuildingResultWithLocationMatcher.projectBuildingResultWithLocation;
 import static org.apache.maven.project.ProjectBuildingResultWithProblemMessageMatcher.projectBuildingResultWithProblemMessage;
@@ -52,8 +53,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
-public class ProjectBuilderTest
+class ProjectBuilderTest
     extends AbstractCoreMavenComponentTestCase
 {
     @Override
@@ -63,7 +63,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testSystemScopeDependencyIsPresentInTheCompileClasspathElements()
+    void testSystemScopeDependencyIsPresentInTheCompileClasspathElements()
         throws Exception
     {
         File pom = getProject( "it0063" );
@@ -81,7 +81,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testBuildFromModelSource()
+    void testBuildFromModelSource()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/modelsource/module01/pom.xml" );
@@ -96,7 +96,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testVersionlessManagedDependency()
+    void testVersionlessManagedDependency()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/versionless-managed-dependency.xml" );
@@ -112,7 +112,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testResolveDependencies()
+    void testResolveDependencies()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/basic-resolveDependencies.xml" );
@@ -146,7 +146,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testDontResolveDependencies()
+    void testDontResolveDependencies()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/basic-resolveDependencies.xml" );
@@ -166,7 +166,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testReadModifiedPoms( @TempDir Path tempDir ) throws Exception {
+    void testReadModifiedPoms( @TempDir Path tempDir ) throws Exception {
         // TODO a similar test should be created to test the dependency management (basically all usages
         // of DefaultModelBuilder.getCache() are affected by MNG-6530
 
@@ -190,7 +190,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testReadErroneousMavenProjectContainsReference()
+    void testReadErroneousMavenProjectContainsReference()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/artifactMissingVersion.xml" ).getAbsoluteFile();
@@ -224,7 +224,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testReadInvalidPom()
+    void testReadInvalidPom()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/badPom.xml" ).getAbsoluteFile();
@@ -250,7 +250,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testReadParentAndChildWithRegularVersionSetParentFile()
+    void testReadParentAndChildWithRegularVersionSetParentFile()
         throws Exception
     {
         List<File> toRead = new ArrayList<>( 2 );
@@ -311,7 +311,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testBuildProperties()
+    void testBuildProperties()
             throws Exception
     {
         File file = new File( getProject( "MNG-6716" ).getParentFile(), "project/pom.xml" );
@@ -329,7 +329,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testPropertyInPluginManagementGroupId()
+    void testPropertyInPluginManagementGroupId()
             throws Exception
     {
         File pom = getProject( "MNG-6983" );
@@ -343,7 +343,7 @@ public class ProjectBuilderTest
     }
 
     @Test
-    public void testBuildFromModelSourceResolvesBasedir()
+    void testBuildFromModelSourceResolvesBasedir()
         throws Exception
     {
         File pomFile = new File( "src/test/resources/projects/modelsourcebasedir/pom.xml" );
