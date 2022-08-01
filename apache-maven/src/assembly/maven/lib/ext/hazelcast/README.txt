@@ -1,5 +1,6 @@
-This directory is intended to contain Hazelcast JARs for Maven Resolver Named Locks using Hazelcast.
+This directory is intended to contain Hazelcast [1] JARs for Maven Resolver Named Locks using Hazelcast.
 
-See here [1] on how to add necessary JARs.
+See here [2] on how to add necessary JARs.
 
-[1] https://maven.apache.org/resolver/maven-resolver-named-locks-hazelcast/index.html#installation-testing
+[1] https://github.com/hazelcast/hazelcast
+[2] https://maven.apache.org/resolver/maven-resolver-named-locks-hazelcast/index.html#installation-testing
